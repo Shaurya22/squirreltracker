@@ -1,0 +1,62 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'Squirrel_Sightings/style.css' %}">
+<table>
+	<thead>
+		<tr>
+		  <th>ID</th>
+		  <th>Squirrel ID</th>
+		  <th>Latitude</th>
+		  <th>Longitude</th>
+		  <th>Shift</th>
+		  <th>Date</th>
+		  <th>Age</th>
+		  <th>Location</th>
+		  <th>Particular Location</th>
+		  <th>Color of fur</th>
+		  <th>Run</th>
+		  <th>Chase</th>
+		  <th>Climb</th>
+		  <th>Eat</th>
+		  <th>Forage</th>
+		  <th>Other Activities</th>
+		  <th>Kuk</th>
+		  <th>Quaa</th>
+		  <th>Moan</th>
+		  <th>Tail Flags</th>
+		  <th>Tail Twitches</th>
+		  <th>Approach</th>
+		  <th>Indifferent</th>
+		  <th>Runs</th>
+		</tr>
+	</thead>
+	<tbody>
+          {% for sighting in sightings %}
+          <tr>
+                  <td>{{sighting.id}}</td>
+		  <td> <a>{{sighting.squirrel_id}}</a> </td>
+                  <td>{{sighting.Latitude}} </td>
+                  <td>{{sighting.Longitude}} </td>
+		  <td>{{sighting.shift}} </td>
+		  <td>{{sighting.date}} </td>
+                  <td>{{sighting.age}} </td>
+                  <td>{{sighting.location}} </td>
+                  <td>{{sighting.particular_location}} </td>
+                  <td>{{sighting.color_of_fur}} </td>
+                  <td>{{sighting.Run}} </td>
+                  <td>{{sighting.Chase}} </td>
+                  <td>{{sighting.Climb}} </td>
+                  <td>{{sighting.Eat}} </td>
+                  <td>{{sighting.forage}} </td>
+                  <td>{{sighting.other_activities}} </td>
+                  <td>{{sighting.kuk}} </td>
+                  <td>{{sightingqQuaa}} </td>
+                  <td>{{sighting.moans}} </td>
+                  <td>{{sighting.tail_flags}} </td>
+                  <td>{{sighting.tail_twitches}} </td>
+                  <td>{{sighting.approach}} </td>
+                  <td>{{sighting.indifferent}} </td>
+                  <td>{{sighting.runs_from}} </td>
+          </tr>
+          {% endfor %}		
+	</tbody>
+</table>
