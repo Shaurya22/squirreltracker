@@ -50,124 +50,124 @@ class Squirrels(models.Model):
 
     Longitude = models.FloatField()
 
-    squirrel_id = models.CharField(
+    Unique_Squirrel_ID = models.CharField(
             max_length=30,
             help_text=_("Squirrel ID"),
         )
 
-    shift = models.CharField(
+    Shift = models.CharField(
             max_length=2,
             choices=SHIFT_CHOICES,
         )
 
-    date = models.DateField(
+    Date = models.DateField(
             help_text=_("Date of the sighting"),
         )
 
-    age = models.CharField(
+    Age = models.CharField(
             max_length=50,
             choices=AGE_CHOICES,
             help_text=_("Age"),
         )
 
-    location = models.CharField(
+    Location = models.CharField(
             max_length=100,
             choices=LOC_CHOICES,
             default=OTHER,
             help_text=_("Location of the Squirrel"),
         )
 
-    particular_location = models.CharField(
+    Specific_location = models.CharField(
             max_length=30,
             help_text=_("Particular Location of the sighting"),
         )
 
-    color_of_fur = models.CharField(
+    Primary_Fur_Colour = models.CharField(
             max_length=20,
             choices=COLOR_CHOICES,
             help_text=_("Color of the squirrel fur"),
         )
     
-    Run = models.CharField(
+    Running = models.CharField(
             max_length=20,
             choices=BOOL_CHOICES,
             help_text=_('Is it on the run?'),
             )
 
-    Chase = models.CharField(
+    Chasing = models.CharField(
             max_length=20,
             choices=BOOL_CHOICES,
             help_text=_('Is it chasing something?'),
             )
 
 
-    Climb = models.CharField(
+    Climbing = models.CharField(
             max_length=20,
             choices=BOOL_CHOICES,
             help_text=_('Is it climbing something?'),
             
             )
 
-    Eat = models.CharField(
+    Eating = models.CharField(
             max_length=20,
             choices=BOOL_CHOICES,
             help_text=_('Is it eating something?'),
             )
 
-    forage = models.CharField(
+    Foraging = models.CharField(
             max_length=20,
             choices=BOOL_CHOICES,
             help_text=_('Is it looking for food?'),
             )
 
-    other_activities = models.CharField(
+    Other_Activities = models.CharField(
             max_length=100,
             help_text=_('What else is it doing?'),
             )
 
-    kuk = models.CharField(
+    Kuks = models.CharField(
             max_length=20,
             choices=BOOL_CHOICES,
             help_text=_('Is it making short noise?'),
             )
 
-    quaa = models.CharField(
+    Quaas = models.CharField(
             max_length=20,
             choices=BOOL_CHOICES,
             help_text=_('Is it making longer noises?'),
             )
 
-    moans = models.CharField(
+    Moans = models.CharField(
             max_length=20,
             choices=BOOL_CHOICES,
             help_text=_('Is it moaning?'),
             )
 
-    tail_flags = models.CharField(
+    Tail_flags = models.CharField(
             max_length=20,
             choices=BOOL_CHOICES,
             help_text=_('Is it flagging it’s tail?'),
             )
 
-    tail_twitches = models.CharField(
+    Tail_twitches = models.CharField(
             max_length=20,
             choices=BOOL_CHOICES,
             help_text=_('Is it twitching it’s tail?'),
             )
 
-    approach = models.CharField(
+    Approaches = models.CharField(
             max_length=20,
             choices=BOOL_CHOICES,
             help_text=_('Is it approaching?'),
             )
 
-    indifferent = models.CharField(
+    Indifferent = models.CharField(
             max_length=20,
             choices=BOOL_CHOICES,
             help_text=_('Is it indifferent?'),
             )
 
-    runs_from = models.CharField(
+    Runs_from = models.CharField(
             max_length=20,
             choices=BOOL_CHOICES,
             help_text=_('Is it running away?'),
