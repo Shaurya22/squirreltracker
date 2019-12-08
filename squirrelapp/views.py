@@ -29,3 +29,19 @@ def edit_squirrel(request, Unique_Squirrel_Id):
             'form':form,
         }
     return render(request, 'Squirrel_app/edit.html', context)
+
+def add_squirrel(request):
+    if request.method == 'POST':
+        #check the form data
+        form = SquirrelForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect(f'/Squirrelapp/list/')
+    else:
+        form = SquirrelForm()
+    context = {
+            'form':form,
+        }
+    return render(request, '/Squirrelapp/edit.html', context)
+
+

@@ -1,0 +1,11 @@
+<!doctype>
+<html>
+  <body>
+    <form method="post">
+      {% csrf_token %} <!--wraps functions/template tags-->
+      {{ form.as_p }} <!--wraps variables-->
+      <br>
+      <input type="submit" name="Submit">
+    </form>
+  </body>
+</html>
