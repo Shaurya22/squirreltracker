@@ -173,4 +173,4 @@ class Squirrels(models.Model):
             help_text=_('Is it running away?'),
         )
     def __str__(self):
-        return self.Unique_Squirrel_Id
+        return self.Unique_Squirrel_ID

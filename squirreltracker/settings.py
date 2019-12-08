@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'squirrelapp.apps.squirrelappconfig',
+    'squirrelapp.apps.SquirrelappConfig',
 ]
 
 MIDDLEWARE = [
@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'squirreltracker.urls'
+ROOT_URLCONF = 'squirrelapp.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'squirreltracker.wsgi.application'
+WSGI_APPLICATION = 'squirrelapp.wsgi.application'
 
 
 # Database
