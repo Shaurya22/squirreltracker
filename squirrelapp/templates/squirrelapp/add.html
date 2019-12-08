@@ -1,0 +1,33 @@
+<!doctype>  
+<html>  
+  <body>    
+    <form method="post">
+      {% csrf_token %} <!--wraps functions/template tags-->
+      {{ form.Unique_Squirrel_Id.label}}:     {{ form.Unique_Squirrel_Id }}<br><br>
+        {{ form.Latitude.label}}:               {{ form.Latitude }}<br><br>
+        {{ form.Longitude.label}}:              {{ form.Longitude }}<br><br>
+        {{ form.Shift.label}}:                  {{ form.Shift }}<br><br>
+        {{ form.Date.label}}:                   {{ form.Date }}<br><br>
+        {{ form.Age.label}}:                    {{ form.Age }}<br><br>
+        {{ form.Location.label}}:               {{ form.Location }}<br><br>
+        {{ form.Specific_Location.label}}:      {{ form.Specific_Location }}<br><br>
+        {{ form.Primary_Fur_Colour.label}}:     {{ form.Primary_Fur_Colour }}<br><br>
+        {{ form.Running.label}}:                {{ form.Running }}<br><br>
+        {{ form.Chasing.label}}:                {{ form.Chasing }}<br><br>
+        {{ form.Climbing.label}}:               {{ form.Climbing }}<br><br>
+        {{ form.Eating.label}}:                 {{ form.Eating }}<br><br>
+        {{ form.Foraging.label}}:               {{ form.Foraging }}<br><br>
+        {{ form.Other_Activities.label}}:       {{ form.Other_Activities }}<br><br>
+        {{ form.Kuks.label}}:                   {{ form.Kuks }}<br><br>
+        {{ form.Quaas.label}}:                  {{ form.Quaas }}<br><br>
+        {{ form.Moans.label}}:                  {{ form.Moans }}<br><br>
+        {{ form.Tail_flags.label}}:             {{ form.Tail_flags }}<br><br>
+        {{ form.Tail_twitches.label}}:          {{ form.Tail_twitches }}<br><br>
+        {{ form.Approaches.label}}:             {{ form.Approaches }}<br><br>
+        {{ form.Indifferent.label}}:            {{ form.Indifferent }}<br><br>
+        {{ form.Runs_from.label}}:              {{ form.Runs_from }}<br><br>
+      <br>  
+      <input type="submit" name="Submit">
+    </form> 
+  </body>
+</html>

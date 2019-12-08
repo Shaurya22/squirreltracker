@@ -1,0 +1,19 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'squirrelapp/style.css'%}">
+<h1>STATS FOR SQUIRREL SIGHTINGS</h1>
+<table>
+	<thead>
+		<tr>
+			<th>Activity/Feature</th>
+			<th>Count</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for key, value in stats.items %}
+  		    <tr>
+			    <td>{{key}}</td>
+			    <td>{{value}}</td>
+		    </tr>
+		{% endfor %}
+        </tbody>
+</table>
