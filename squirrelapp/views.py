@@ -8,3 +8,9 @@ def index(request):
             }
     return render(request, 'squirrelapp/index.html',context)
 
+def coordinates(request):
+    squirrels  = Squirrels.objects.all()[:100]
+    context = {
+            "squirrels": squirrels,
+         }
+    return render(request, 'squirrelapp/map.html', context)
