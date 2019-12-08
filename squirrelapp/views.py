@@ -4,7 +4,7 @@ from . models import Squirrels
 
 def index(request):
     context = {
-            "squirrelapp": Squirrels.objects.all()
+            "sightings": Squirrels.objects.all(),"field_names":Squirrels._meta.get_fields()
             }
     return render(request, 'squirrelapp/index.html',context)
 
