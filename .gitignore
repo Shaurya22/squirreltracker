@@ -1,0 +1,9 @@
+*.log
+local_settings.py
+
+
+*/__pycache__/*
+squirrelapp/management/commands/__pycache__/*
+squirrelapp/migrations/__pycache__/*
+squirreltracker/__pycache__/*
+squirrelapp/__pycache__/*
