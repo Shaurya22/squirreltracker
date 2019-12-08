@@ -50,7 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'squirrelapp.urls'
+ROOT_URLCONF = 'squirreltracker.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'squirrelapp.wsgi.application'
+WSGI_APPLICATION = 'squirreltracker.wsgi.application'
 
 
 # Database
