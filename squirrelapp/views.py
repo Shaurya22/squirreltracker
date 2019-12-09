@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
-from . models import Squirrels
+from .models import Squirrels
 from .forms import SquirrelForm
 
 def index(request):
