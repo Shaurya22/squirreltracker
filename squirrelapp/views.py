@@ -10,7 +10,7 @@ def index(request):
     return render(request, 'squirrelapp/index.html', context)
 
 def coordinates(request):
-    squirrels  = Squirrels.objects.order_by('?')[:100]
+    squirrels  = Squirrels.objects.order_all()[:100]
     context = {
             "squirrels": squirrels,
          }
