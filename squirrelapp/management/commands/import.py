@@ -18,8 +18,8 @@ class Command(BaseCommand):
         for item in data:       
              F = Squirrels(
                 Unique_Squirrel_ID = item['Unique Squirrel ID'],
-                Latitude = item['X'],
-                Longitude = item['Y'],
+                Latitude = item['Y'],
+                Longitude = item['X'],
                 Shift = item['Shift'],
                 Date = dt.datetime.strptime(item['Date'].strip(),'%m%d%Y').date(),
                 Age = item['Age'],
