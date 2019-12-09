@@ -46,9 +46,9 @@ class Squirrels(models.Model):
             (OTHER, 'Other'),
         )
 
-    Latitude = models.FloatField()
+    Latitude = models.FloatField(help_text=_("Latitude"),)
 
-    Longitude = models.FloatField()
+    Longitude = models.FloatField(help_text=_("Longitude"),)
 
     Unique_Squirrel_ID = models.CharField(
             max_length=30,
