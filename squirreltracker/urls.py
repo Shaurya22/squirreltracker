@@ -13,17 +13,17 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
+<<<<<<< HEAD
 from django.urls import path,include
 from squirrelapp import views
+=======
+from django.urls import include,path
+>>>>>>> 72f79178000007576275080d607c1ca737fad5f6
 
 urlpatterns = [
-    path('squirrelapp/', include('Squirrelapp.urls')),   
     path('admin/', admin.site.urls),
-    path('views/',views.index),
-    path('map/',views.coordinates),
-    path('update/',views.edit_squirrel),
-    path('add/', views.add_squirrel),
-    path('stats/',views.stats),  
+    path('',include ('squirrelapp.urls')),
+    
 ]
-
