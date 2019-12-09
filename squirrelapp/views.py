@@ -12,7 +12,7 @@ def index(request):
 def coordinates(request):
     squirrels  = Squirrels.objects.all()[:100]
     context = {
-            "squirrels": Squirrels,
+            "squirrels": squirrels,
          }
     return render(request, 'squirrelapp/map.html', context)
 
