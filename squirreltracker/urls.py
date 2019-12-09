@@ -18,11 +18,10 @@ from django.urls import path,include
 from squirrelapp import views
 
 urlpatterns = [
-    path('squirrelapp/', include('squirrelapp.urls')),
-    path('admin/', admin.site.urls),
     path('views/',views.index),
     path('map/',views.coordinates),
+    path('update/',views.edit_squirrel),
     path('add/', views.add_squirrel),
     path('stats/',views.stats),
-    path('update/',views.edit_squirrel)
+    
 ]
