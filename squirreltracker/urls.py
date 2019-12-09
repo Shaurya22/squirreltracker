@@ -16,12 +16,9 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path,include
-from squirrelapp import views
-
-from django.urls import include,path
 
 urlpatterns = [
+    path('squirrelapp/', include('Squirrelapp.urls')),
     path('admin/', admin.site.urls),
-    path('',include ('squirrelapp.urls')),
     
 ]
