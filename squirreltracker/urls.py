@@ -15,12 +15,10 @@ Including another URLconf
 """
 
 from django.contrib import admin
-<<<<<<< HEAD
 from django.urls import path,include
 from squirrelapp import views
-=======
+
 from django.urls import include,path
->>>>>>> 72f79178000007576275080d607c1ca737fad5f6
 
 urlpatterns = [
     path('admin/', admin.site.urls),
