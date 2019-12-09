@@ -3,11 +3,11 @@ from django.shortcuts import render, get_object_or_404, redirect
 from . models import Squirrels
 from .forms import SquirrelForm
 
-def view_all(request):
+def index(request):
     context = {
             "sightings":Squirrels.objects.all(),"field_names":Squirrels._meta.get_fields()
         }
-    return render(request, 'squirrelapp/view_all.html',context)
+    return render(request, 'squirrelapp/index.html',context)
 
 def coordinates(request):
     squirrels  = Squirrels.objects.all()[:100]
@@ -60,54 +60,54 @@ def stats(request):
     quaas_count = 0
     moans_count = 0
     tail_flags_count=0
-    for s in Squirrels.objects.all():
-        if s.Running == 'TRUE':
+    for F in Squirrels.objects.all():
+        if F.Running == 'TRUE':
              running_count +=1
         else:
              pass
-        if s.Climbing == 'TRUE':
+        if F.Climbing == 'TRUE':
              climbing_count +=1
         else:
              pass
-        if s.Chasing == 'TRUE':
+        if F.Chasing == 'TRUE':
              chasing_count +=1
         else:
              pass
-        if s.Primary_Fur_Color == 'Black':
+        if F.Primary_Fur_Colour == 'Black':
             black_count +=1
-        elif s.Primary_Fur_Color == 'Cinnamon':
+        elif F.Primary_Fur_Colour == 'Cinnamon':
             cinnamon_count +=1
-        elif s.Primary_Fur_Color == 'Gray':
+        elif F.Primary_Fur_Colour == 'Gray':
             gray_count +=1
         else:
             pass
-        if s.Foraging == 'TRUE':
+        if F.Foraging == 'TRUE':
              foraging_count +=1
         else:
              pass
-        if s.Eating == 'TRUE':
+        if F.Eating == 'TRUE':
              eating_count +=1
         else:
              pass
-        if s.Age == 'Juvenile':
+        if F.Age == 'Juvenile':
             juvenile_count +=1
-        elif s.Age == 'Adult':
+        elif F.Age == 'Adult':
             adult_count +=1
         else:
             pass
-        if s.Kuks == 'TRUE':
+        if F.Kuks == 'TRUE':
             kuks_count +=1
         else:
             pass
-        if s.Quaas =='TRUE':
+        if F.Quaas =='TRUE':
             quaas_count +=1
         else:
             pass
-        if s.Moans == 'TRUE':
+        if F.Moans == 'TRUE':
             moans_count +=1
         else:
             pass
-        if s.Tail_flags == 'TRUE':
+        if F.Tail_flags == 'TRUE':
              tail_flags_count +=1
         else:
              pass
