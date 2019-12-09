@@ -43,7 +43,7 @@ def add_squirrel(request):
     context = {
             'form':form,
         }
-    return render(request, '/squirrelapp/edit.html', context)
+    return render(request, '/squirrelapp/add.html', context)
 
 def stats(request):
     black_count = 0
