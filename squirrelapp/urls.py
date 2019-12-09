@@ -10,3 +10,4 @@ urlpatterns = [
     path('stats/',views.stats),
     path('<str:Unique_Squirrel_Id>/edit/',views.edit_squirrel),
 ]
+
