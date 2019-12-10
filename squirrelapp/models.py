@@ -2,26 +2,19 @@ from django.db import models
 from django.utils.translation import gettext as _
 
 class Squirrels(models.Model):
-    TRUE = 'true'
-    FALSE = 'false'
     AM = 'AM'
     PM = 'PM'
-    ADULT = 'adult'
-    JUVENILE = 'juvenile'
+    ADULT = 'Adult'
+    JUVENILE = 'Juvenile'
     BLANK = ''
     UNKNOWN = '?'
-    BLACK = 'black'
-    CINNAMON = 'cinnamon'
-    GRAY = 'gray'
-    GROUND_PLANE = 'ground plane'
-    ABOVE_GROUND = 'above ground'
-    OTHER = 'other'
+    BLACK = 'Black'
+    CINNAMON = 'Cinnamon'
+    GRAY = 'Gray'
+    GROUND_PLANE = 'Ground Llane'
+    ABOVE_GROUND = 'Above Ground'
+    OTHER = 'Other'
 
-    BOOL_CHOICES = (
-            (TRUE, 'True'),
-            (FALSE, 'False'),
-        )
-    
     SHIFT_CHOICES = (
             (AM, 'AM'),
             (PM, 'PM'),
@@ -51,6 +44,7 @@ class Squirrels(models.Model):
     Longitude = models.FloatField(help_text=_("Longitude"),)
 
     Unique_Squirrel_ID = models.CharField(
+            primary_key = True,
             max_length=30,
             help_text=_("Squirrel ID"),
         )
@@ -58,6 +52,7 @@ class Squirrels(models.Model):
     Shift = models.CharField(
             max_length=2,
             choices=SHIFT_CHOICES,
+            help_text=_("Shift"),
         )
 
     Date = models.DateField(
@@ -66,6 +61,7 @@ class Squirrels(models.Model):
 
     Age = models.CharField(
             max_length=50,
+            default=BLANK,
             choices=AGE_CHOICES,
             help_text=_("Age"),
         )
@@ -79,97 +75,87 @@ class Squirrels(models.Model):
 
     Specific_location = models.CharField(
             max_length=30,
-            help_text=_("Particular Location of the sighting"),
+            default="",
+            help_text=_("Specific Location of the sighting"),
         )
 
     Primary_Fur_Colour = models.CharField(
             max_length=20,
+            default=BLACK,
             choices=COLOR_CHOICES,
             help_text=_("Color of the squirrel fur"),
         )
     
-    Running = models.CharField(
-            max_length=20,
-            choices=BOOL_CHOICES,
+    Running = models.BooleanField(
+            default=False,
             help_text=_('Is it on the run?'),
             )
 
-    Chasing = models.CharField(
-            max_length=20,
-            choices=BOOL_CHOICES,
+    Chasing = models.BooleanField(
+            default=False,
             help_text=_('Is it chasing something?'),
             )
 
 
-    Climbing = models.CharField(
-            max_length=20,
-            choices=BOOL_CHOICES,
+    Climbing = models.BooleanField(
+            default=False,
             help_text=_('Is it climbing something?'),
             
             )
 
-    Eating = models.CharField(
-            max_length=20,
-            choices=BOOL_CHOICES,
+    Eating = models.BooleanField(
+            default=False,
             help_text=_('Is it eating something?'),
             )
 
-    Foraging = models.CharField(
-            max_length=20,
-            choices=BOOL_CHOICES,
+    Foraging = models.BooleanField(
+            default=False,
             help_text=_('Is it looking for food?'),
             )
 
     Other_Activities = models.CharField(
             max_length=100,
+            default=None,
             help_text=_('What else is it doing?'),
             )
 
-    Kuks = models.CharField(
-            max_length=20,
-            choices=BOOL_CHOICES,
+    Kuks = models.BooleanField(
+            default=False,
             help_text=_('Is it making short noise?'),
             )
 
-    Quaas = models.CharField(
-            max_length=20,
-            choices=BOOL_CHOICES,
+    Quaas = models.BooleanField(
+            default=False,
             help_text=_('Is it making longer noises?'),
             )
 
-    Moans = models.CharField(
-            max_length=20,
-            choices=BOOL_CHOICES,
+    Moans = models.BooleanField(
+            default=False,
             help_text=_('Is it moaning?'),
             )
 
-    Tail_flags = models.CharField(
-            max_length=20,
-            choices=BOOL_CHOICES,
+    Tail_flags = models.BooleanField(
+            default=False,
             help_text=_('Is it flagging it’s tail?'),
             )
 
-    Tail_twitches = models.CharField(
-            max_length=20,
-            choices=BOOL_CHOICES,
+    Tail_twitches = models.BooleanField(
+            default=False,
             help_text=_('Is it twitching it’s tail?'),
             )
 
-    Approaches = models.CharField(
-            max_length=20,
-            choices=BOOL_CHOICES,
+    Approaches = models.BooleanField(
+            default=False,
             help_text=_('Is it approaching?'),
             )
 
-    Indifferent = models.CharField(
-            max_length=20,
-            choices=BOOL_CHOICES,
+    Indifferent = models.BooleanField(
+            default=False,
             help_text=_('Is it indifferent?'),
             )
 
-    Runs_from = models.CharField(
-            max_length=20,
-            choices=BOOL_CHOICES,
+    Runs_from = models.BooleanField(
+            default=False,
             help_text=_('Is it running away?'),
         )
     def __str__(self):

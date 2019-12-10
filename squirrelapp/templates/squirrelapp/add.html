@@ -3,14 +3,14 @@
   <body>    
     <form method="post">
       {% csrf_token %} <!--wraps functions/template tags-->
-      {{ form.Unique_Squirrel_Id.label}}:     {{ form.Unique_Squirrel_Id }}<br><br>
+      {{ form.Unique_Squirrel_ID.label}}:     {{ form.Unique_Squirrel_ID }}<br><br>
         {{ form.Latitude.label}}:               {{ form.Latitude }}<br><br>
         {{ form.Longitude.label}}:              {{ form.Longitude }}<br><br>
         {{ form.Shift.label}}:                  {{ form.Shift }}<br><br>
         {{ form.Date.label}}:                   {{ form.Date }}<br><br>
         {{ form.Age.label}}:                    {{ form.Age }}<br><br>
         {{ form.Location.label}}:               {{ form.Location }}<br><br>
-        {{ form.Specific_Location.label}}:      {{ form.Specific_Location }}<br><br>
+        {{ form.Specific_location.label}}:      {{ form.Specific_location }}<br><br>
         {{ form.Primary_Fur_Colour.label}}:     {{ form.Primary_Fur_Colour }}<br><br>
         {{ form.Running.label}}:                {{ form.Running }}<br><br>
         {{ form.Chasing.label}}:                {{ form.Chasing }}<br><br>

@@ -31,15 +31,15 @@
 	<tbody>
           {% for sighting in sightings %}
           <tr>
-                  <td>{{sighting.Unique_Squirrel_Id}}</td>
+		  <td><a href="{{sighting.Unique_Squirrel_ID}}/edit/">{{sighting.Unique_Squirrel_ID}}</a></td>
 		  <td>{{sighting.Latitude}} </td>
                   <td>{{sighting.Longitude}} </td>
 		  <td>{{sighting.Shift}} </td>
 		  <td>{{sighting.Date}} </td>
                   <td>{{sighting.Age}} </td>
                   <td>{{sighting.Location}} </td>
-                  <td>{{sighting.Specific_Location}} </td>
-                  <td>{{sighting.Primary_Fur_Color}} </td>
+                  <td>{{sighting.Specific_location}} </td>
+                  <td>{{sighting.Primary_Fur_Colour}} </td>
                   <td>{{sighting.Running}} </td>
                   <td>{{sighting.Chasing}} </td>
                   <td>{{sighting.Climbing}} </td>

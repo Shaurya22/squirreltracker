@@ -46,7 +46,7 @@
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
         }).addTo(map);
         {% for sighting in squirrels %}
-          var point_lat_lon = [{{ sighting.Longitude}}, {{ sighting.Latitude}}];
+          var point_lat_lon = [{{ sighting.Latitude}}, {{ sighting.Longitude}}];
 	  var marker = L.marker(point_lat_lon).addTo(map);
         {% endfor %} 
     </script>
