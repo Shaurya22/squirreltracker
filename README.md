@@ -6,7 +6,7 @@ Project Name: **Squirrel Tracker**
 
 APP Name: **Squirrelapp** 
 
-APP LINK: http://tools-project-1.appspot.com/squirrelapp/home/
+APP LINK: http://tools-project-1.appspot.com/
 
 
 **Contributors**
