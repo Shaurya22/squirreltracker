@@ -3,6 +3,9 @@ from django.shortcuts import render, get_object_or_404, redirect
 from . models import Squirrels
 from .forms import SquirrelForm
 
+def home(request):
+    return render(request,'squirrelapp/home.html')
+
 def index(request):
     context = {
             "sightings":Squirrels.objects.all(),"field_names":Squirrels._meta.get_fields()
@@ -61,15 +64,15 @@ def stats(request):
     moans_count = 0
     tail_flags_count=0
     for F in Squirrels.objects.all():
-        if F.Running == 'TRUE':
+        if F.Running == True:
              running_count +=1
         else:
              pass
-        if F.Climbing == 'TRUE':
+        if F.Climbing == True:
              climbing_count +=1
         else:
              pass
-        if F.Chasing == 'TRUE':
+        if F.Chasing == True:
              chasing_count +=1
         else:
              pass
@@ -81,11 +84,11 @@ def stats(request):
             gray_count +=1
         else:
             pass
-        if F.Foraging == 'TRUE':
+        if F.Foraging == True:
              foraging_count +=1
         else:
              pass
-        if F.Eating == 'TRUE':
+        if F.Eating == True:
              eating_count +=1
         else:
              pass
@@ -95,37 +98,37 @@ def stats(request):
             adult_count +=1
         else:
             pass
-        if F.Kuks == 'TRUE':
+        if F.Kuks == True:
             kuks_count +=1
         else:
             pass
-        if F.Quaas =='TRUE':
+        if F.Quaas == True:
             quaas_count +=1
         else:
             pass
-        if F.Moans == 'TRUE':
+        if F.Moans == True:
             moans_count +=1
         else:
             pass
-        if F.Tail_flags == 'TRUE':
+        if F.Tail_flags == True:
              tail_flags_count +=1
         else:
              pass
 
-    details = {'Number of squirrels found eating': eating_count,
-                'Number of squirrels found running':running_count,
-                'Number of squirrels found climbing':climbing_count,
-                'Number of squirrels found chasing':chasing_count,
-                'Number of squirrels found with black fur':black_count,
-                'Number of squirrels found with cinnamon fur':cinnamon_count,
-                'Number of squirrels found with gray fur':gray_count,
-                'Number of squirrels found foraging':foraging_count,
-                'Number of squirrels found flagging tails':tail_flags_count,
-                'Number of squirrels found as a juvenile':juvenile_count,
-                'Number of squirrels found as a adult': adult_count,
-                'Number of squirrels found making kuk sounds':kuks_count,
-                'Number of squirrels found making quaas sounds':quaas_count,
-                'Number of squirrels found making moan sounds': moans_count,
+    details = {'Squirrels found eating': eating_count,
+                'Squirrels found running':running_count,
+                'Sqquirrels found climbing':climbing_count,
+                'Squirrels found chasing':chasing_count,
+                'Squirrels found with black fur':black_count,
+                'Squirrels found with cinnamon fur':cinnamon_count,
+                'Squirrels found with gray fur':gray_count,
+                'Squirrels found foraging':foraging_count,
+                'Squirrels found flagging tails':tail_flags_count,
+                'Squirrels found as a juvenile':juvenile_count,
+                'Squirrels found as a adult': adult_count,
+                'Squirrels found making kuk sounds':kuks_count,
+                'Squirrels found making quaas sounds':quaas_count,
+                'Squirrels found making moan sounds': moans_count,
             }
     context = {"stats":details}
     return render(request, 'squirrelapp/stats.html', context)
